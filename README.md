@@ -17,7 +17,7 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/yourusername/salesforce-etl-json.git
+   git clone https://github.com/<yourusername>/salesforce-etl-json.git
    cd salesforce-etl-json
    ```
 
