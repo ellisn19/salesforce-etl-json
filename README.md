@@ -8,7 +8,6 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 
 ## Features
 
-- Connects to Salesforce using `jsforce`
 - Extracts Salesforce records using SOQL
 - Transforms data with customizable mapping functions
 - Outputs JSON files for use in other systems or workflows
@@ -30,7 +29,7 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 
 3. Configure your Salesforce credentials:
 
-   Update the `getCredsFromSalesforce` function in `src/salesforce.js` to return your Salesforce username, password, security token, and login URL.
+   Update the `alias` property in `config/org.json` to match your org's alias.
 
 4. Create an output directory in the root folder:
 
@@ -43,7 +42,7 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 Run the ETL process with:
 
 ```bash
-npm start
+npm start --<queryName>
 ```
 
 This will:
