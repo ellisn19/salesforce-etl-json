@@ -1,0 +1,14 @@
+{
+	"name": "salesforce-etl-json",
+	"version": "1.0.0",
+	"description": "Extract, transform, and export Salesforce data to JSON using Node.js",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"author": "Your Name",
+	"license": "MIT",
+	"dependencies": {
+		"jsforce": "^2.0.0"
+	}
+}
