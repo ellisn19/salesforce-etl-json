@@ -31,7 +31,7 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 
 3. Configure your Salesforce credentials:
 
-Update the `getCredsFromSalesforce` function in `src/salesforce.js` to return your Salesforce username, password, security token, and login URL.
+   Update the `getCredsFromSalesforce` function in `src/salesforce.js` to return your Salesforce username, password, security token, and login URL.
 
 4. Create an output directory in the root folder:
 
