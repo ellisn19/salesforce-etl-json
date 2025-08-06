@@ -18,7 +18,6 @@ async function runETL(queryName) {
 		throw new Error(`No query found for name: ${queryName}`);
 	}
 
-	const objectName = queries[queryName].objectName;
 	const soql = queries[queryName].query;
 
 	const records = fetchSalesforceRecords(soql);
