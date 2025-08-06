@@ -47,13 +47,11 @@ npm start --<queryName>
 
 This will:
 
-- Authenticate to Salesforce
-
-- Extract up to 100 Contact records
+- Execute the defined query
 
 - Transform them according to your mapping logic
 
-- Write the output to `output/contacts.json`
+- Write the output to `output/<queryName>.json`
 
 Project Structure
 
