@@ -4,7 +4,7 @@ Extract, transform, and export Salesforce data to JSON using Node.js.
 
 ## Overview
 
-This is a simple ETL tool that connects to Salesforce, retrieves data from objects like Contact, applies custom transformations, and outputs the results as JSON files. It’s designed to be lightweight and easy to extend.
+This is a simple ETL tool that connects to Salesforce, retrieves data from objects like Account, applies custom transformations, and outputs the results as JSON files. It’s designed to be lightweight and easy to extend.
 
 ## Features
 
