@@ -5,8 +5,8 @@ const { fetchSalesforceRecords } = require('./sfdxExtract');
 const { transformRecord } = require('./transform');
 const queries = require('../config/queries.json');
 
-async function runETL() {
-	const queryName = 'AccountTestQuery';
+async function runETL(queryName) {
+	// const queryName = 'AccountTestQuery';
 	if (!queries[queryName]) {
 		throw new Error(`No query found for name: ${queryName}`);
 	}
@@ -29,7 +29,7 @@ async function runETL() {
 	if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
 	fs.writeFileSync(
-		path.join(outputDir, 'accounts.json'),
+		path.join(outputDir, queryName + '.json'),
 		JSON.stringify(transformed, null, 2)
 	);
 
