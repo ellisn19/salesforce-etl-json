@@ -43,7 +43,7 @@ This will:
 
 - Execute the defined query in `config/queries.json`
 
-- Transform them according to your mapping logic
+- Transform the returned records according to your mapping logic
 
 - Write the output to `output/<queryName>.json`
 
