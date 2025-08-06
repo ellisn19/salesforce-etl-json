@@ -31,12 +31,6 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 
    Update the `alias` property in `config/org.json` to match your org's alias.
 
-4. Create an output directory in the root folder:
-
-   ```bash
-   mkdir output
-   ```
-
 ## Usage
 
 Run the ETL process with:
