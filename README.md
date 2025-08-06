@@ -47,7 +47,7 @@ npm start --<queryName>
 
 This will:
 
-- Execute the defined query
+- Execute the defined query in `config/queries.json`
 
 - Transform them according to your mapping logic
 
