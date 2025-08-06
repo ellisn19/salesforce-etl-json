@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # salesforce-etl-json
 
 Extract, transform, and export Salesforce data to JSON using Node.js.
