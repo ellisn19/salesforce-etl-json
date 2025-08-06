@@ -3,9 +3,15 @@ const fs = require('fs');
 const path = require('path');
 const { fetchSalesforceRecords } = require('./sfdxExtract');
 const { transformRecord } = require('./transform');
+const queries = require('../config/queries.json');
 
 async function runETL() {
-	const soql = 'SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100';
+	const objectName = 'Account';
+	const soql = queries[objectName];
+	if (!soql) {
+		throw new Error(`No SOQL query found for object: ${objectName}`);
+	}
+
 	const records = fetchSalesforceRecords(soql);
 
 	if (!records.length) {
@@ -13,7 +19,6 @@ async function runETL() {
 		return;
 	}
 
-	const objectName = 'Account';
 	const transformed = records.map((record) =>
 		transformRecord(record, objectName)
 	);
