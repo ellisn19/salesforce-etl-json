@@ -1,15 +1,22 @@
 // src/transform.js
+const fieldMap = require('../config/fieldMap.json');
 
-function transformRecord(record) {
-	return {
-		fullName: `${record.FirstName || ''} ${record.LastName || ''}`.trim(),
-		email: record.Email || null,
-		createdAt: record.CreatedDate
-			? new Date(record.CreatedDate).toISOString()
-			: null,
-		phone: record.Phone || null,
-		isActive: record.IsActive === 'true' || record.IsActive === true,
-	};
+function transformRecord(record, objectName = 'Contact') {
+	const map = fieldMap[objectName];
+	const output = {};
+
+	for (const [outField, sfFields] of Object.entries(map)) {
+		if (Array.isArray(sfFields)) {
+			output[outField] = sfFields
+				.map((f) => record[f] || '')
+				.join(' ')
+				.trim();
+		} else {
+			output[outField] = record[sfFields];
+		}
+	}
+
+	return output;
 }
 
 module.exports = {
