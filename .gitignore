@@ -142,3 +142,4 @@ node_modules/
 output/
 config/creds.json
 .env
+package-lock.json
