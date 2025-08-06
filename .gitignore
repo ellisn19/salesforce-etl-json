@@ -141,6 +141,6 @@ vite.config.ts.timestamp-*
 node_modules/
 output/
 config/creds.json
+config/org.json
 .env
 package-lock.json
-.config\org.json
