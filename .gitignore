@@ -143,4 +143,4 @@ output/
 config/creds.json
 .env
 package-lock.json
-config\org.json
+.config\org.json
