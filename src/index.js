@@ -1,7 +1,7 @@
 const runETL = require('./etl');
 
 async function main() {
-	const args = process.argv.slice(2); // skip `node` and script name
+	const args = process.argv.slice(2);
 	if (args.length === 0) {
 		console.error('Please provide a query name as an argument.');
 		process.exit(1);
