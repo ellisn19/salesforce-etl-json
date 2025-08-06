@@ -6,9 +6,9 @@
 	"scripts": {
 		"start": "node index.js"
 	},
-	"author": "Your Name",
-	"license": "MIT",
+	"author": "Nicholas Ellis",
+	"license": "",
 	"dependencies": {
-		"jsforce": "^2.0.0"
+		"jsforce": "^1.11.0"
 	}
 }
