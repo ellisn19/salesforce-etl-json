@@ -5,8 +5,15 @@ const { fetchSalesforceRecords } = require('./sfdxExtract');
 const { transformRecord } = require('./transform');
 const queries = require('../config/queries.json');
 
+/**
+ * Executes an ETL (Extract, Transform, Load) process for a specified Salesforce query.
+ * Fetches records using the provided query name, transforms them, and writes the output to a JSON file.
+ *
+ * @async
+ * @param {string} queryName - The name of the query to execute from the queries object.
+ * @throws {Error} If no query is found for the provided queryName.
+ */
 async function runETL(queryName) {
-	// const queryName = 'AccountTestQuery';
 	if (!queries[queryName]) {
 		throw new Error(`No query found for name: ${queryName}`);
 	}
@@ -22,7 +29,7 @@ async function runETL(queryName) {
 	}
 
 	const transformed = records.map((record) =>
-		transformRecord(record, objectName)
+		transformRecord(record, queryName)
 	);
 
 	const outputDir = path.resolve(__dirname, '..', 'output');
