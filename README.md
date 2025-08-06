@@ -65,7 +65,7 @@ This will:
 
 - Write the output to `output/<queryName>.json`
 
-Project Structure
+## Project Structure
 
 ```
 salesforce-etl-json/
