@@ -1,3 +1,6 @@
 {
-	"Account": "SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100"
+	"AccountTestQuery": {
+		"objectName": "Account",
+		"query": "SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100"
+	}
 }
