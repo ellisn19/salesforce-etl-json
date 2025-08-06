@@ -1,6 +1,12 @@
 {
 	"AccountTestQuery": {
 		"objectName": "Account",
-		"query": "SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100"
+		"query": "SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100",
+		"fieldMap": {
+			"id": "Id",
+			"Name": "Name",
+			"phone": "Phone",
+			"createdDate": "CreatedDate"
+		}
 	}
 }
