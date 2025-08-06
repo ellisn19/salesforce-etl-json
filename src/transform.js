@@ -1,16 +1,24 @@
 // src/transform.js
-const fieldMap = require('../config/fieldMap.json');
+const queries = require('../config/queries.json');
 
-function transformRecord(record, objectName) {
+/**
+ * Transforms a Salesforce record into a new object based on a field mapping for the given query name.
+ *
+ * @param {Object} record - The Salesforce record to transform.
+ * @param {string} queryName - The name of the query to determine the field mapping.
+ * @returns {Object} The transformed record with mapped fields.
+ * @throws {Error} If the record is invalid, queryName is missing, or no field mapping is found.
+ */
+function transformRecord(record, queryName) {
 	if (!record || typeof record !== 'object') {
 		throw new Error('Invalid record provided for transformation.');
 	}
-	if (!objectName) {
-		throw new Error('Object name is required for transformation.');
+	if (!queryName) {
+		throw new Error('Query name is required for transformation.');
 	}
-	const map = fieldMap[objectName];
+	const map = queries[queryName].fieldMap;
 	if (!map) {
-		throw new Error(`No field mapping found for object: ${objectName}`);
+		throw new Error(`No field mapping found for object: ${queryName}`);
 	}
 	const output = {};
 
