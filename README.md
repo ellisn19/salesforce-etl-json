@@ -38,7 +38,6 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
    ```json
    {
    	"queryName": {
-   		"objectName": "Account",
    		"query": "SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100",
    		"fieldMap": {
    			"id": "Id",
