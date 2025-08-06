@@ -1,5 +1,5 @@
 // index.js
-const runETL = require('./src/etl');
+const runETL = require('./etl.js');
 
 (async () => {
 	try {
