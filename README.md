@@ -73,12 +73,6 @@ salesforce-etl-json/
 
 ## Extending
 
-- Add support for other Salesforce objects by modifying the SOQL query in `etl.js`
-
-- Enhance transformations in `transform.js`
-
-- Secure credentials using environment variables or secret managers instead of hardcoding
-
 - Support other output formats (CSV, databases, APIs)
 
 ## License
