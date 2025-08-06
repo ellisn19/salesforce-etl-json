@@ -42,9 +42,9 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 
 Run the ETL process with:
 
-   ```bash
-   npm start
-   ```
+```bash
+npm start
+```
 
 This will:
 
@@ -58,19 +58,21 @@ This will:
 
 Project Structure
 
-   ```
-   salesforce-etl-json/
-   ├── output/           # JSON output files
-   ├── config/           # (Optional) Config and secrets
-   ├── src/
-   │ ├── index.js        # Entry point
-   │ ├── etl.js          # ETL orchestration
-   │ ├── salesforce.js   # Salesforce connection logic
-   │ └── transform.js    # Data transformation functions
-   ├── package.json
-   ├── README.md
-   └── .gitignore
-   ```
+```
+salesforce-etl-json/
+├── output/           # JSON output files
+├── config/           # Config
+│ ├── org.json        # Org Config
+│ ├── queries.json    # Queries Config
+├── src/
+│ ├── index.js        # Entry point
+│ ├── etl.js          # ETL orchestration
+│ ├── sfdxExtract.js  # Salesforce query logic
+│ └── transform.js    # Data transformation functions
+├── package.json
+├── README.md
+└── .gitignore
+```
 
 ## Extending
 
