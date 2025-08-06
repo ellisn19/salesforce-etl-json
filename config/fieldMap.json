@@ -1,9 +1,8 @@
 {
-	"Contact": {
-		"fullName": ["FirstName", "LastName"],
-		"email": "Email",
-		"createdAt": "CreatedDate",
+	"Account": {
+		"id": "Id",
+		"name": "Name",
 		"phone": "Phone",
-		"isActive": "IsActive"
+		"createdDate": "CreatedDate"
 	}
 }
