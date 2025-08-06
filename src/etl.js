@@ -6,11 +6,13 @@ const { transformRecord } = require('./transform');
 const queries = require('../config/queries.json');
 
 async function runETL() {
-	const objectName = 'Account';
-	const soql = queries[objectName];
-	if (!soql) {
-		throw new Error(`No SOQL query found for object: ${objectName}`);
+	const queryName = 'AccountTestQuery';
+	if (!queries[queryName]) {
+		throw new Error(`No query found for name: ${queryName}`);
 	}
+
+	const objectName = queries[queryName].objectName;
+	const soql = queries[queryName].query;
 
 	const records = fetchSalesforceRecords(soql);
 
