@@ -73,6 +73,6 @@ salesforce-etl-json/
 
 ## License
 
-TBD
+MIT
 
 Feel free to reach out if you want help adding features or improving security!
