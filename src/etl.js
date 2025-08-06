@@ -1,41 +1,29 @@
 // src/etl.js
 const fs = require('fs');
 const path = require('path');
-const { getSalesforceConnection } = require('./salesforce');
+const { fetchSalesforceRecords } = require('./sfdxExtract');
 const { transformRecord } = require('./transform');
 
 async function runETL() {
-	const conn = await getSalesforceConnection();
+	const soql = 'SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100';
+	const records = fetchSalesforceRecords(soql);
 
-	// Extract
-	const records = await conn
-		.sobject('Contact')
-		.find({}, [
-			'Id',
-			'FirstName',
-			'LastName',
-			'Email',
-			'Phone',
-			'CreatedDate',
-			'IsActive',
-		])
-		.limit(100)
-		.execute();
+	if (!records.length) {
+		console.log('No records returned.');
+		return;
+	}
 
-	console.log(`Extracted ${records.length} records.`);
-
-	// Transform
 	const transformed = records.map(transformRecord);
 
-	// Load - write JSON to output folder
 	const outputDir = path.resolve(__dirname, '..', 'output');
-	if (!fs.existsSync(outputDir)) {
-		fs.mkdirSync(outputDir);
-	}
-	const outputPath = path.join(outputDir, 'contacts.json');
-	fs.writeFileSync(outputPath, JSON.stringify(transformed, null, 2));
+	if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
-	console.log(`Transformed data written to ${outputPath}`);
+	fs.writeFileSync(
+		path.join(outputDir, 'contacts.json'),
+		JSON.stringify(transformed, null, 2)
+	);
+
+	console.log(`Extracted and transformed ${records.length} records.`);
 }
 
 module.exports = runETL;
