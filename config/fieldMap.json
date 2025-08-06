@@ -1,0 +1,9 @@
+{
+	"Contact": {
+		"fullName": ["FirstName", "LastName"],
+		"email": "Email",
+		"createdAt": "CreatedDate",
+		"phone": "Phone",
+		"isActive": "IsActive"
+	}
+}
