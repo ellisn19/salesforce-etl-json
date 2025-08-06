@@ -20,7 +20,6 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
    ```bash
    git clone https://github.com/yourusername/salesforce-etl-json.git
    cd salesforce-etl-json
-
    ```
 
 2. Install dependencies:
@@ -43,9 +42,9 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 
 Run the ETL process with:
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 This will:
 
@@ -59,25 +58,25 @@ This will:
 
 Project Structure
 
-    ```
-    salesforce-etl-json/
-    ├── output/ # JSON output files
-    ├── config/ # (Optional) Config and secrets
-    ├── src/
-    │ ├── index.js # Entry point
-    │ ├── etl.js # ETL orchestration
-    │ ├── salesforce.js # Salesforce connection logic
-    │ └── transform.js # Data transformation functions
-    ├── package.json
-    ├── README.md
-    └── .gitignore
-    ```
+   ```
+   salesforce-etl-json/
+   ├── output/ # JSON output files
+   ├── config/ # (Optional) Config and secrets
+   ├── src/
+   │ ├── index.js # Entry point
+   │ ├── etl.js # ETL orchestration
+   │ ├── salesforce.js # Salesforce connection logic
+   │ └── transform.js # Data transformation functions
+   ├── package.json
+   ├── README.md
+   └── .gitignore
+   ```
 
 ## Extending
 
-- Add support for other Salesforce objects by modifying the SOQL query in etl.js
+- Add support for other Salesforce objects by modifying the SOQL query in `etl.js`
 
-- Enhance transformations in transform.js
+- Enhance transformations in `transform.js`
 
 - Secure credentials using environment variables or secret managers instead of hardcoding
 
