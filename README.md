@@ -36,7 +36,7 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 Run the ETL process with:
 
 ```bash
-npm start --<queryName>
+npm start <queryName>
 ```
 
 This will:
