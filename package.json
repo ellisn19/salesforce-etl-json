@@ -4,7 +4,7 @@
 	"description": "Extract, transform, and export Salesforce data to JSON using Node.js",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js"
+		"start": "node src/index.js"
 	},
 	"author": "Nicholas Ellis",
 	"license": "",
