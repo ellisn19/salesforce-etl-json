@@ -33,19 +33,19 @@ This is a simple ETL tool that connects to Salesforce, retrieves data from objec
 
    Update the `alias` property in `config/org.json` to match your org's alias.
 
-4. Configure a query and mapping in `config/querries.json`:
+4. Configure a query and field mapping in `config/querries.json`:
 
    ```json
    {
-      "queryName": {
-         "query": "SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100",
-         "fieldMap": {
-            "id": "Id",
-            "name": "Name",
-            "phone": "Phone",
-            "createdDate": "CreatedDate"
-         }
-      }
+   	"queryName": {
+   		"query": "SELECT Id, Name, Phone, CreatedDate FROM Account LIMIT 100",
+   		"fieldMap": {
+   			"id": "Id",
+   			"name": "Name",
+   			"phone": "Phone",
+   			"createdDate": "CreatedDate"
+   		}
+   	}
    }
    ```
 
