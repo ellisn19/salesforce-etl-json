@@ -60,13 +60,13 @@ Project Structure
 
    ```
    salesforce-etl-json/
-   ├── output/ # JSON output files
-   ├── config/ # (Optional) Config and secrets
+   ├── output/           # JSON output files
+   ├── config/           # (Optional) Config and secrets
    ├── src/
-   │ ├── index.js # Entry point
-   │ ├── etl.js # ETL orchestration
-   │ ├── salesforce.js # Salesforce connection logic
-   │ └── transform.js # Data transformation functions
+   │ ├── index.js        # Entry point
+   │ ├── etl.js          # ETL orchestration
+   │ ├── salesforce.js   # Salesforce connection logic
+   │ └── transform.js    # Data transformation functions
    ├── package.json
    ├── README.md
    └── .gitignore
