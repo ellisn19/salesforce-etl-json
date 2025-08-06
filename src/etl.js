@@ -13,13 +13,16 @@ async function runETL() {
 		return;
 	}
 
-	const transformed = records.map(transformRecord);
+	const objectName = 'Account';
+	const transformed = records.map((record) =>
+		transformRecord(record, objectName)
+	);
 
 	const outputDir = path.resolve(__dirname, '..', 'output');
 	if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
 	fs.writeFileSync(
-		path.join(outputDir, 'contacts.json'),
+		path.join(outputDir, 'accounts.json'),
 		JSON.stringify(transformed, null, 2)
 	);
 
