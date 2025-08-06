@@ -7,7 +7,7 @@
 		"start": "node src/index.js"
 	},
 	"author": "Nicholas Ellis",
-	"license": "",
+	"license": "MIT",
 	"dependencies": {
 		"jsforce": "^1.11.0"
 	}
