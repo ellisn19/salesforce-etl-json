@@ -91,4 +91,4 @@ salesforce-etl-json/
 
 MIT
 
-Feel free to reach out if you want help adding features or improving security!
+Feel free to reach out if you want help adding features!
